@@ -1,0 +1,12 @@
+body {
+  padding-top: 50px;
+  background: #E0E4CC;
+}
+.navbar { padding-left: 10px; background: #A7DBD8; color: #E0E4CC; border-color: #A7DBD8; }
+h1 { color: #F38630 }
+.welcome-title {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+
