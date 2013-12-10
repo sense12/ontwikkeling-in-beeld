@@ -33,3 +33,15 @@ EOF
 }
 
 my_profile > ~/.profile
+
+# TODO add nginx to repo and install
+
+#cat /vagrant/bin/nginx/default.conf.tpl > /etc/nginx/conf.d/default.conf
+
+cd /vagrant/
+add_pypi_packages(){
+virtualenv venv
+source ./venv/bin/activate
+pip install -r requirements.txt
+}
+[ ! -f venv ] && add_pypi_packages

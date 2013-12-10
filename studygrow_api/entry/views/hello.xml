@@ -1,0 +1,10 @@
+<studygrow url="{{ url_for('entry.v1') }}">
+    <description>
+        This is the entry point of StudyGrow API. See the developer portal for extra documentation. Go to studygrow.github.io for more info.
+        First off, start creating a user or request a temporairy one to use the listed resources below.
+    </description>
+    <endpoints>
+        <endpoint name="user" url="{{ url_for('user.resource') }}" />
+        <endpoint name="activity" url="{{ url_for('activity.resource', username='pick_your_name') }}" />
+    </endpoints>
+</studygrow>

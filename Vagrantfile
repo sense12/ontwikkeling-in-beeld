@@ -8,7 +8,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.box = "sl6"
   config.vm.box_url = "http://lyte.id.au/vagrant/sl6-64-lyte.box"
+
   config.vm.network :private_network, ip: "192.168.33.10"
   config.vm.network :forwarded_port, guest: 80, host: 5372
   config.ssh.forward_agent = true
+
+  config.vm.provision :shell, :path => "bin/setup.sh"
 end

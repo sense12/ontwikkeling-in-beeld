@@ -1,3 +1,4 @@
+projectname=app
 path=$(PYTHONPATH)
 
 all:
@@ -8,18 +9,18 @@ start:
 
 
 stop:
-	-@kill -QUIT `cat /tmp/gunicorn.pid` && echo "stopped" || echo "failed"
+	kill -QUIT `cat /tmp/gunicorn.pid` && echo "stopped" || echo "failed"
 clean: stop
 	find . -type f -name "*.pyc" -delete
 	find . -type f -name "*.pyo" -delete
 
 docs:
-	export PYTHONPATH=${REDUC_HOME} && \
+	export PYTHONPATH=`pwd` && \
         cd docs && make clean html && \
         export PYTHONPATH=${path}
 
 pep8:
-	pep8 --ignore E501 --show-source -r ${projectname} --exclude reduc/lib/modules/ && echo "All good!"
+	pep8 --ignore E501 --show-source -r ${projectname} && echo "All good!"
 
 unittest:
 	clean-pyc
