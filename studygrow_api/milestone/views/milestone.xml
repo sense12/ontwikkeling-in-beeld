@@ -1,0 +1,12 @@
+<milestone url="{{ item.url }}">
+    {% for workbook in workbooks %}
+    <workbook>
+        <title>{{ workbook.title }}</title>
+        <workitems>
+            {% for workitem in workbook.workitems %}
+            <workitem title="{{ workitem.title }}" \>
+            {% endfor %}
+        </workitems>
+    </workbook>
+    {% endfor %}
+</milestone>

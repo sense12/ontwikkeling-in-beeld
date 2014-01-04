@@ -1,4 +1,4 @@
-projectname=app
+projectname=studygrow_api
 path=$(PYTHONPATH)
 
 all:

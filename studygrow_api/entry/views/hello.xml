@@ -5,6 +5,5 @@
     </description>
     <endpoints>
         <endpoint name="user" url="{{ url_for('user.resource') }}" />
-        <endpoint name="activity" url="{{ url_for('activity.resource', username='pick_your_name') }}" />
     </endpoints>
 </studygrow>

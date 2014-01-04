@@ -1,4 +1,0 @@
-<activity url="{{ item.url }}">
-    <title>{{ item.title }}</title>
-    <pomodoros>{{ item.estimate }}</pomodoros>
-</activity>

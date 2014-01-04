@@ -1,3 +1,0 @@
-<user url="{{ url_for('.resource') }}">
-    <activity url="{{ url_for('activity.resource', username='pick_your_name') }}" />
-</user>

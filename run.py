@@ -1,13 +1,13 @@
 import os
-from flask import Flask, jsonify, request, abort
+from flask import request, abort
 
 from studygrow_api import config
-from studygrow_api.lib import MyFlask
 from studygrow_api import routes
 
+from studygrow_api import app
+
 # use the name application so it will work with beanstalk
-application = MyFlask(__name__) 
-app = application
+application = app
 
 
 def main():

@@ -1,0 +1,8 @@
+<users>
+    {% for user in users %}
+    <user url="{{ url_for('.resource', username=user.uid) }}">
+        <email>{{ user.email }}</email>
+        <milestones url="{{ url_for('milestone.collection', user_id=user.uid) }}" />
+    </user>
+    {% endfor %}
+</users>

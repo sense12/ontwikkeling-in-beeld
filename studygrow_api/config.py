@@ -7,3 +7,20 @@ mime_types = {
 }
 
 supported_mimes = sum(mime_types.values(), [])
+
+
+mysql = dict(
+    user='root',
+    pswd='',
+    host='127.0.0.1',
+    dbname='studygrow'
+)
+
+mysql_uri = "mysql://{user}:{pswd}@{host}/{dbname}".format(
+        user=mysql['user'],
+        pswd=mysql['pswd'],
+        host=mysql['host'],
+        dbname=mysql['dbname']
+        )
+
+
