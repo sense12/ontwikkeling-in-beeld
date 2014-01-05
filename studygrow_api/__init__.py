@@ -2,8 +2,6 @@ __version__ = '1.0.1'
 
 version = dict(zip(['mayor', 'minor', 'patch'], __version__.split('.')))
 
-
-
 from flask import Flask
 from studygrow_api.lib import MyFlask
 from flask.ext.sqlalchemy import SQLAlchemy

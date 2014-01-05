@@ -1,0 +1,7 @@
+<courses>
+    {% for course in courses %}
+    <course url="{{ url_for('.resource', uid=course.uid) }}">{{ course.title }}</course>
+    {% endfor %}
+</courses>
+
+
