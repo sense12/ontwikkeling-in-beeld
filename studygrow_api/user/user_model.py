@@ -4,6 +4,10 @@ from studygrow_api import db_cursor
 
 class Class(db.Model):
 
+    """
+    Student - Class
+    """
+
     __tablename__ = 's_class'
     uid = db.Column('class_id', db.Integer, db.ForeignKey('u_user.class_id'), primary_key=True)
     class_code = db.Column(db.String)
@@ -18,6 +22,10 @@ class Class(db.Model):
 
 
 class User(db.Model):
+
+    """
+    User - User
+    """
 
     __tablename__ = 'u_user'
     uid = db.Column('user_id', db.Integer, primary_key=True)
@@ -39,7 +47,7 @@ class User(db.Model):
         """ % (classes)
         c.execute(q)
         iter = c.fetchall()
-        
+
         results = []
         for row in iter:
             user = User()

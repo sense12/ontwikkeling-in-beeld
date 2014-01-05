@@ -17,10 +17,8 @@ mysql = dict(
 )
 
 mysql_uri = "mysql://{user}:{pswd}@{host}/{dbname}".format(
-        user=mysql['user'],
-        pswd=mysql['pswd'],
-        host=mysql['host'],
-        dbname=mysql['dbname']
-        )
-
-
+    user=mysql['user'],
+    pswd=mysql['pswd'],
+    host=mysql['host'],
+    dbname=mysql['dbname']
+)
