@@ -1,6 +1,6 @@
 <courses>
     {% for course in courses %}
-    <course url="{{ url_for('.resource', uid=course.uid) }}">{{ course.title }}</course>
+    <course url="{{ url_for('.resource', course_id=course.uid) }}">{{ course.title }}</course>
     {% endfor %}
 </courses>
 

@@ -1,6 +1,7 @@
 __version__ = '1.0.1'
 
 version = dict(zip(['mayor', 'minor', 'patch'], __version__.split('.')))
+url_version = '/v' + version.get('mayor')
 
 from flask import Flask
 from studygrow_api.lib import MyFlask

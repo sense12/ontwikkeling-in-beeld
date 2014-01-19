@@ -1,6 +1,6 @@
 <users>
     {% for user in users %}
-    <user url="{{ url_for('.resource', username=user.uid) }}">
+    <user url="{{ url_for('.resource', user_id=user.uid) }}">
         <email>{{ user.email }}</email>
         <milestones url="{{ url_for('milestone.collection', user_id=user.uid) }}" />
     </user>

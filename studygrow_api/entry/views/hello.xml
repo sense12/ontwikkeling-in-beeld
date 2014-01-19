@@ -4,6 +4,6 @@
         First off, start creating a user or request a temporairy one to use the listed resources below.
     </description>
     <endpoints>
-        <endpoint name="user" url="{{ url_for('user.resource') }}" />
+        <endpoint name="user" url="{{ url_for('user.collection') }}" />
     </endpoints>
 </studygrow>

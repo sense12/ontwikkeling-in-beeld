@@ -1,0 +1,25 @@
+<course>
+    <id>{{ course.uid }}</id>
+    <title>{{ course.title }}</title>
+    <assignments>
+        {% for assignment in assignments %}
+            <assignment>
+                <id>{{ assignment.uid }}</id>
+                <title>{{ assignment.title }}</title>
+                <weight>{{ assignment.weight }}</weight>
+                {% if assignment.childs %}
+                <childs>
+                    {% for child in assignment.childs %}
+                    <child>
+                        <id>{{ child.uid }}</id>
+                        <title>{{ child.title }}</title>
+                        <weight>{{ child.weight }}</weight>
+                    </child>
+                    {% endfor %}
+                </childs>
+                {% endif %}
+            </assignment>
+        {% endfor %}
+    </assignments>
+</course>
+
