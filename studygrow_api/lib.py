@@ -12,6 +12,14 @@ class MyFlask(Flask):
         exception_message = "Could not convert body to %s\norigal status_code: %r\noriginal data:\n%r"
         mime = request.headers['Content-Type']
 
+        if response.status_code == 302:
+            body = """
+<redirect location="%s">
+<message>You should be redirected automatically to target URL</message>
+</redirect>
+""" % response.headers.get('Location')
+            response.data = body 
+
         # some browsers don't give an content type? so this is our default
         if mime in config.mime_types['other']:
             mime = 'application/xml'
